@@ -7,10 +7,12 @@ let textDiv;
 let textP;
 let textP2;
 let buttonDiv;
+let buttonDiv2;
 let upButton;
 let downButton;
 let leftButton;
 let rightButton;
+let saveButton;
 
 // Global ML Variables
 let featureExtractor;
@@ -97,10 +99,15 @@ function buildButtons() {
     knnClassifier.addExample(imgFeatures, "Center");
   });
   // new code below
-
+  buttonDiv2 = createDiv();
+  saveButton = createButton("Save");
+  saveButton.parent(buttonDiv2);
+  saveButton.mousePressed(function(){
+    knnClassifier.save();
+  });
   buttonDiv.style("display", "none");
   // new code below
-
+  buttonDiv2.style("display", "none");
 }
 
 function videoReady() {
