@@ -40,6 +40,7 @@ function setup() {
   downs = 0;
   lefts = 0;
   rights = 0;
+  centers = 0;
   video = createCapture(VIDEO, videoReady);
 }
 
